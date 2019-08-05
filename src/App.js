@@ -40,7 +40,7 @@ class App extends React.Component {
    console.log('App.js state',this.state.tasks)
    return (
      <div>
-       <h2>Welcome to your Todo App!</h2>
+       <h2>Things To Do!</h2>
        <TodoList tasks={this.state.tasks}/>
        <TodoForm addTask={this.addTask}/>
      </div>
