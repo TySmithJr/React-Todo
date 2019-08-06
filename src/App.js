@@ -38,8 +38,12 @@ class App extends React.Component {
 
  clearTask = () => {
    this.setState({
-     tasks: this.set.tasks.filter(todo =>todo.task)
+     tasks: this.set.tasks.filter(todo =>!todo.task)
    })
+ }
+
+ toggle = () => {
+
  }
  // you will need a place to store your state in this component.
  // design `App` to be the parent component of your application.
@@ -51,6 +55,7 @@ class App extends React.Component {
        <h2>Things To Do!</h2>
        <TodoList tasks={this.state.tasks}/>
        <TodoForm addTask={this.addTask}/>
+       <clearTask clearTask={this.clearTask}/>
      </div>
    );
  }
